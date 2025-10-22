@@ -1,0 +1,155 @@
+ui:
+  titles:
+    shopcoin: "&6&l🛒 Shop Coin"
+    shopgem: "&d&l💠 Shop Gem"
+    bando_main: "&a&l📦 Bán Đồ"
+    bando_amount: "&a&l📦 Chọn Số Lượng"
+  pane_colors:
+    border: "GRAY_STAINED_GLASS_PANE"
+    empty: "LIGHT_GRAY_STAINED_GLASS_PANE"
+  bedrock_compact: true
+  use_emojis: true
+
+economy:
+  pay_mode_on_sell: "vault" # hoặc "essentials_auto"
+bando:
+  console_command_on_sell: "eco give %player% %amount%"
+
+messages:
+  not_enough_coin: "&cBạn không đủ coin!"
+  not_enough_gem: "&cBạn không đủ gem!"
+  inv_full: "&cKho đồ đầy!"
+  bought: "&aMua thành công &f%item%"
+  sold: "&aĐã bán &f%amount%x %item% &7- &e+%value% coin"
+  gem_owned: "&cBạn đã có ngọc này rồi!"
+  gem_expired: "&cNgọc đã hết hạn!"
+  confirm_sell: "&eXác nhận bán: &f%amount%x %item% &7=&e %value% coin"
+  no_item_to_sell: "&cBạn không đủ vật phẩm cần bán!"
+
+shopcoin:
+  rows: 3
+  items:
+    - name: "&a🍖 Bánh Mì"
+      material: "BREAD"
+      amount: 8
+      slot: 10
+      price_coin: 10
+      lore:
+        - "&7➛ Hồi &f4&7 thanh đói"
+        - "&e✦ Giá: &f10 coin"
+    - name: "&6⚔ Kiếm Sắt"
+      material: "IRON_SWORD"
+      slot: 12
+      price_coin: 200
+      lore:
+        - "&7➛ Vũ khí cơ bản"
+        - "&e✦ Giá: &f200 coin"
+    - name: "&b💠 Ngọc Tơ Trói"
+      material: "STRING"
+      slot: 14
+      price_coin: 250
+      coin_gem_skill: "TO_TROI"
+      lore:
+        - "&7➛ Tạo cobweb quanh bạn (1–4s)"
+        - "&c➛ Dùng xong biến mất"
+        - "&e✦ Giá: &f250 coin"
+    - name: "&8💠 Ngọc Khói Mù"
+      material: "COAL"
+      slot: 15
+      price_coin: 180
+      coin_gem_skill: "KHOI_MU"
+      lore:
+        - "&7➛ Làm mù gần đó (2s)"
+        - "&c➛ Dùng xong biến mất"
+        - "&e✦ Giá: &f180 coin"
+
+shopgem:
+  rows: 3
+  limit_one_each_type: true
+  expire_minutes: 60
+  items:
+    - type: "HEAL"
+      name: "&c💖 Ngọc Hồi Máu"
+      material: "AMETHYST_SHARD"
+      slot: 11
+      price_gem: 20
+      lore:
+        - "&7➛ Hồi &f6♥ &7ngay"
+        - "&7➛ Hồi chiêu: &f2 phút"
+        - "&c➛ 1 lần dùng"
+    - type: "INVIS"
+      name: "&7👻 Ngọc Tàng Hình"
+      material: "AMETHYST_SHARD"
+      slot: 12
+      price_gem: 25
+      lore:
+        - "&7➛ Tàng hình &f15s"
+        - "&c➛ 1 lần dùng"
+    - type: "SPEED"
+      name: "&b🌀 Ngọc Tăng Tốc"
+      material: "AMETHYST_SHARD"
+      slot: 13
+      price_gem: 15
+      lore:
+        - "&7➛ Speed II &f30s"
+        - "&c➛ 1 lần dùng"
+    - type: "SHIELD"
+      name: "&e🛡 Ngọc Khiên"
+      material: "AMETHYST_SHARD"
+      slot: 14
+      price_gem: 40
+      lore:
+        - "&7➛ Chặn &f1 đòn chí mạng"
+        - "&c➛ 1 lần dùng"
+    - type: "STRENGTH"
+      name: "&4⚔ Ngọc Cường Hóa"
+      material: "AMETHYST_SHARD"
+      slot: 15
+      price_gem: 30
+      lore:
+        - "&7➛ Strength &f60s"
+        - "&c➛ 1 lần dùng"
+
+bando:
+  rows: 3
+  categories:
+    - name: "&2🧟 Mob Drop"
+      material: "ROTTEN_FLESH"
+      slot: 13
+      items:
+        - material: "ROTTEN_FLESH"
+          price_coin: 2
+        - material: "BONE"
+          price_coin: 3
+        - material: "STRING"
+          price_coin: 3
+        - material: "SPIDER_EYE"
+          price_coin: 4
+        - material: "ENDER_PEARL"
+          price_coin: 15
+        - material: "GUNPOWDER"
+          price_coin: 5
+        - material: "GHAST_TEAR"
+          price_coin: 50
+        - material: "WITHER_SKELETON_SKULL"
+          price_coin: 200
+        - material: "NETHER_STAR"
+          price_coin: 1000
+        - material: "GOLDEN_APPLE"
+          price_coin: 120
+        - material: "ENCHANTED_GOLDEN_APPLE"
+          price_coin: 900
+    - name: "&6⛏ Khoáng Sản"
+      material: "IRON_INGOT"
+      slot: 15
+      items:
+        - material: "IRON_INGOT"
+          price_coin: 10
+        - material: "GOLD_INGOT"
+          price_coin: 15
+        - material: "DIAMOND"
+          price_coin: 50
+        - material: "EMERALD"
+          price_coin: 80
+        - material: "NETHERITE_SCRAP"
+          price_coin: 200
