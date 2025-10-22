@@ -52,7 +52,13 @@ public class CoinShop implements CommandExecutor, Listener {
                 int slot = ((Number)m.get("slot")).intValue();
                 int price = ((Number)m.get("price_coin")).intValue();
                 @SuppressWarnings("unchecked")
-                List<String> lore = (List<String>) m.getOrDefault("lore", new ArrayList<String>());
+                List<String> lore;
+                Object rawLore = m.get("lore");
+                if (rawLore instanceof List<?>) {
+                    lore = ((List<?>) rawLore).stream().map(Object::toString).toList();
+                } else {
+                    lore = new ArrayList<>();
+                }
                 ItemStack it = ItemUtil.makeItem(Material.valueOf(mat), amount, name, lore);
                 ItemMeta meta = it.getItemMeta();
                 meta.getPersistentDataContainer().set(GemTags.KIND, PersistentDataType.STRING, "COIN_OR_VANILLA");
