@@ -54,7 +54,13 @@ public class GemShop implements CommandExecutor, Listener {
                 int priceGem = ((Number)m.get("price_gem")).intValue();
                 String type = (String)m.get("type");
                 @SuppressWarnings("unchecked")
-                List<String> lore = (List<String>) m.getOrDefault("lore", new ArrayList<String>());
+                List<String> lore;
+                Object rawLore = m.get("lore");
+                if (rawLore instanceof List<?>) {
+                    lore = ((List<?>) rawLore).stream().map(Object::toString).toList();
+                } else {
+                    lore = new ArrayList<>();
+                }
                 ItemStack it = ItemUtil.makeItem(Material.valueOf(mat), 1, name, lore);
                 ItemMeta meta = it.getItemMeta();
                 GemTags.mark(meta, "GEM", type, System.currentTimeMillis() + expireMinutes*60L*1000L);
