@@ -89,7 +89,7 @@ public class GemSkillListener implements Listener {
                 return true;
             }
             case "STRENGTH" -> {
-                p.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20*60, 0));
+                p.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, 20*60, 0));
                 Msg.send(p, "&c✦ Cường hóa 60s!");
                 return true;
             }
